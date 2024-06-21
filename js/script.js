@@ -105,13 +105,16 @@ function carregarConteudo(controle) {
 }
 
 $('.cpf').mask('000.000.000-00');
-
-$('.telefoneBR').mask('(00) 0 0000-0000');
-
+$('.cnpj').mask('00.000.000/0000-00');
+$('.rgAntigo').mask('xx-00.000.000');
+$('.rgNovo').mask('000.000.000-00');
+$('.cep').mask('00.000-000');
+$('.celular').mask('(00) 0 0000-0000');
+$('.telefone').mask('(00) 0000-0000');
 $('.dinheiro').mask('000.000.000.000.000,00', {reverse: true});
 
 
-function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal = 'A', botao, addEditDel, inFocus, inFocusValue, formulario, caminhoFoto = 'nao') {
+function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal = 'A', botao, addEditDel, inFocus, inFocusValue, formulario) {
     const formDados = document.getElementById(formulario);
     let formEnviado = false;
 
@@ -175,7 +178,6 @@ function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal 
         if (innome !== 'nao') {
             nome.value = idNome;
         }
-
 
         formDados.addEventListener('submit', submitHandler);
     } else {
