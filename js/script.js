@@ -114,7 +114,7 @@ $('.telefone').mask('(00) 0000-0000');
 $('.dinheiro').mask('000.000.000.000.000,00', {reverse: true});
 
 
-function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal = 'A', botao, addEditDel, inFocus, inFocusValue, formulario) {
+function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal, botao, addEditDel, inFocus, inFocusValue, formulario) {
     const formDados = document.getElementById(formulario);
     let formEnviado = false;
 
@@ -157,6 +157,11 @@ function abrirModalJs(id, inID, innome, idNome, nomeModal, dataTime, abrirModal 
                 console.error('Erro na requisição:', error);
             });
     };
+
+    document.getElementById(/*'ID DO BOTAO QUE VAI FECHAR A MODAL'*/).addEventListener('click', function () {
+        ModalInstacia.hide();
+        formDados.removeEventListener('submit', submitHandler);
+    });
 
     if (abrirModal === 'A') {
         ModalInstancia.show();
