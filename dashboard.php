@@ -4,6 +4,13 @@ include_once('./config/constantes.php');
 include_once('./func/funcoes.php');
 
 
+if ($_SESSION['idadm']) {
+    $idUsuario = $_SESSION['idadm'];
+} else {
+    session_destroy();
+    header('location: index.php?error=404');
+}
+
 ?>
 
 <!doctype html>
@@ -22,28 +29,12 @@ include_once('./func/funcoes.php');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
 <body>
-<div class="position-absolute top-50 start-50 translate-middle">
-    <form class="form" method="post" action="#" name="frmLogin" id="frmLogin">
-        <p class="title">Bem-vindo</p>
-        <label>
-            <input class="input" type="email" placeholder="" required="" name="email" id="email">
-            <span>Email</span>
-        </label>
 
-        <label>
-            <input class="input" type="password" placeholder="" required="" name="senha" id="senha">
-            <span>Senha</span>
-        </label>
-        <button class="submit" type="button" name="btnLogin" id="btnLogin">Entrar</button>
-
-    </form>
-
-</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -7,8 +7,8 @@ $controle = filter_input(INPUT_POST, 'controle', FILTER_SANITIZE_STRING);
 
 if (!empty($controle) && isset($controle)) {
     switch ($controle) {
-        case 'addContato':
-            include_once('addContato.php');
+        case '#':
+            include_once('#.php');
             break;
 
     }
