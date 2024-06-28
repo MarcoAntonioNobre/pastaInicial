@@ -28,7 +28,7 @@ include_once('./func/funcoes.php');
 
 <body>
 <div class="position-absolute top-50 start-50 translate-middle">
-    <form class="form" method="post" action="#" name="frmLogin" id="frmLogin">
+        <form class="form" method="post" action="#" name="frmLogin" id="frmLogin">
         <p class="title">Bem-vindo</p>
         <label>
             <input class="input" type="email" placeholder="" required="" name="email" id="email">
@@ -41,7 +41,7 @@ include_once('./func/funcoes.php');
         </label>
         <button class="submit" type="button" name="btnLogin" id="btnLogin">Entrar</button>
 
-    </form>
+    </form> 
 
 </div>
 
